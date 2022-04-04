@@ -1,8 +1,6 @@
-name: "PHP CodeSniffer"
+name: "CI"
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
     paths:
       - "**.php"
