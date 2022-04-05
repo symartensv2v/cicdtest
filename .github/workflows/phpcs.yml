@@ -5,6 +5,7 @@ on:
     paths:
       - "**.php"
       - "**.css"
+      - "**.js"
       - "phpcs.xml"
       - "csscs.xml"
       - ".github/workflows/phpcs.yml"
@@ -26,7 +27,7 @@ jobs:
 
       - uses: tinovyatkin/action-php-codesniffer@v1
         with:
-          files: "*.php,*.css" # you may customize glob as needed
+          files: "*.php,*.css,*.js" # you may customize glob as needed
           phpcs_path: php phpcs.phar -vv -vvv
           standard: phpcs.xml
           scope: files
