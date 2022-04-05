@@ -5,10 +5,10 @@
 	<!-- Include the whole PSR-2 standard ( https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/PSR2/ruleset.xml ) -->
 	<rule ref="PSR2"/>
     <!-- Add additional rule example -->
-    <rule ref="Squiz.CSS.Indentation"/>
+    <!-- <rule ref="Squiz.CSS.Indentation"/>
     <rule ref="Squiz.CSS.MissingColon"/>
     <rule ref="Squiz.CSS.DuplicateStyleDefinition"/>
-    <rule ref="Squiz.CSS.DuplicateClassDefinition"/>
+    <rule ref="Squiz.CSS.DuplicateClassDefinition"/> -->
 	<!-- Ban some functions -->
 	<rule ref="Generic.PHP.ForbiddenFunctions">
         <properties>
