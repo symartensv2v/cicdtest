@@ -25,6 +25,6 @@ jobs:
       #validate css
       - uses: tinovyatkin/action-php-codesniffer@v1
         with:
-          files: "**.css" # you may customize glob as needed
+          files: "*.css" # you may customize glob as needed
           phpcs_path: php phpcs.phar
           standard: csscs.xml
