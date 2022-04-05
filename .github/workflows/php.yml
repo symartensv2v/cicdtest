@@ -26,3 +26,4 @@ jobs:
           files: "*.php" # you may customize glob as needed
           phpcs_path: php phpcs.phar
           standard: phpcs.xml
+          scope: file # either "file" to check entire file or "blame" to check only lines changed by author of current PR'
