@@ -1,0 +1,2 @@
+[![CSS Validator](https://github.com/symartensv2v/cicdtest/actions/workflows/css.yml/badge.svg)](https://github.com/symartensv2v/cicdtest/actions/workflows/css.yml)
+[![PHP Validator](https://github.com/symartensv2v/cicdtest/actions/workflows/php.yml/badge.svg)](https://github.com/symartensv2v/cicdtest/actions/workflows/php.yml)

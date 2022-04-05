@@ -4,4 +4,17 @@
 	<arg name="tab-width" value="4"/>
 	<!-- Include the whole PSR-2 standard ( https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/PSR2/ruleset.xml ) -->
 	<rule ref="PSR2"/>
+	<!-- Ban some functions -->
+	<rule ref="Generic.PHP.ForbiddenFunctions">
+        <properties>
+            <property name="forbiddenFunctions" type="array">
+                <element key="mysqli"/>
+                <element key="mysqli_connect" value="$this->DB->example_replacement"/>
+                <element key="mysqli_close"/>
+                <element key="mysqli_query"/>
+                <element key="mysqli_fetch_assoc"/>
+                <element key="mysqli_fetch_array"/>
+            </property>
+        </properties>
+    </rule>
 </ruleset>

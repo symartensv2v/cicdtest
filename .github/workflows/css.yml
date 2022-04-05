@@ -1,11 +1,11 @@
-name: "CI"
+name: "CSS Validator"
 
 on:
   pull_request:
     paths:
-      - "**.php"
-      - "phpcs.xml"
-      - ".github/workflows/phpcs.yml"
+      - "**.css"
+      - "csscs.xml"
+      - ".github/workflows/css.yml"
 
 jobs:
   phpcs:
@@ -24,7 +24,7 @@ jobs:
 
       - uses: symartensv2v/action-php-codesniffer@v2
         with:
-          files: "*.php" # you may customize glob as needed
+          files: "*.css" # you may customize glob as needed
           phpcs_path: php phpcs.phar
           standard: phpcs.xml
           scope: file # either "file" to check entire file or "blame" to check only lines changed by author of current PR'
