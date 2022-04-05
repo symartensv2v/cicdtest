@@ -11,6 +11,7 @@
     <rule ref="Squiz.CSS.DuplicateClassDefinition"/>
 	<!-- Ban some functions -->
 	<rule ref="Generic.PHP.ForbiddenFunctions">
+        <exclude-pattern>core/databases/*</exclude-pattern>
         <properties>
             <property name="forbiddenFunctions" type="array">
                 <element key="mysqli"/>

@@ -7,7 +7,6 @@ on:
       - "**.css"
       - "**.js"
       - "phpcs.xml"
-      - "csscs.xml"
       - ".github/workflows/phpcs.yml"
 
 jobs:
