@@ -29,9 +29,3 @@ jobs:
           files: "*.php,*.css" # you may customize glob as needed
           phpcs_path: php phpcs.phar -vv -vvv
           standard: phpcs.xml
-
-      - uses: tinovyatkin/action-php-codesniffer@v1
-        with:
-          files: "*.css" # you may customize glob as needed
-          phpcs_path: php phpcs.phar -vv -vvv
-          standard: csscs.xml
