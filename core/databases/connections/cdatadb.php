@@ -9,3 +9,4 @@ test23();
 $test = mysqli_connect('', '', '');
 test23();
 $test = mysqli_close('', '', '');
+

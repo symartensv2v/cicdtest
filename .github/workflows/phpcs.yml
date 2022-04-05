@@ -22,7 +22,7 @@ jobs:
 
       - uses: tinovyatkin/action-php-codesniffer@v1
         with:
-          files: "*.php,*.css,*.js" # you may customize glob as needed
+          files: "**.php,**.css,**.js" # you may customize glob as needed
           phpcs_path: php phpcs.phar
           standard: phpcs.xml
           scope: files
