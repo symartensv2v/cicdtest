@@ -1,17 +1,19 @@
-name: "CSS Validator"
+name: "CI"
 
 on:
   pull_request:
     paths:
+      - "**.php"
       - "**.css"
+      - "phpcs.xml"
       - "csscs.xml"
-      - ".github/workflows/css.yml"
+      - ".github/workflows/phpcs.yml"
 
 jobs:
   phpcs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0 # important!
 
@@ -22,9 +24,14 @@ jobs:
           curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
           php phpcs.phar --version
 
-      - uses: symartensv2v/action-php-codesniffer@v2
+      - uses: tinovyatkin/action-php-codesniffer@v1
+        with:
+          files: "*.php,*.css" # you may customize glob as needed
+          phpcs_path: php phpcs.phar -vv -vvv
+          standard: phpcs.xml
+
+      - uses: tinovyatkin/action-php-codesniffer@v1
         with:
           files: "*.css" # you may customize glob as needed
-          phpcs_path: php phpcs.phar
-          standard: phpcs.xml
-          scope: file # either "file" to check entire file or "blame" to check only lines changed by author of current PR'
+          phpcs_path: php phpcs.phar -vv -vvv
+          standard: csscs.xml
