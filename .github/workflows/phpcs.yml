@@ -20,7 +20,7 @@ jobs:
       - name: Install PHP_CodeSniffer
         run: php phpcs.phar --version
 
-      - uses: tinovyatkin/action-php-codesniffer@v1
+      - uses: hilevelgit/action-php-codesniffer@v1
         with:
           files: "**.php,**.css,**.js" # you may customize glob as needed
           phpcs_path: php phpcs.phar
