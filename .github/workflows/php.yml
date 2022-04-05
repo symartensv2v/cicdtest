@@ -27,13 +27,13 @@ jobs:
       #validate php
       - uses: tinovyatkin/action-php-codesniffer@v1
         with:
-          files: "*.php" # you may customize glob as needed
+          files: "**.php" # you may customize glob as needed
           phpcs_path: php phpcs.phar
           standard: phpcs.xml
 
       #validate css
       - uses: tinovyatkin/action-php-codesniffer@v1
         with:
-          files: "*.css" # you may customize glob as needed
+          files: "**.css" # you may customize glob as needed
           phpcs_path: php phpcs.phar
           standard: csscs.xml
