@@ -1,17 +1,17 @@
-name: "PHP Validator"
+name: "CI"
 
 on:
   pull_request:
     paths:
       - "**.php"
       - "phpcs.xml"
-      - ".github/workflows/php.yml"
+      - ".github/workflows/phpcs.yml"
 
 jobs:
   phpcs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0 # important!
 
@@ -21,8 +21,10 @@ jobs:
         run: |
           curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
           php phpcs.phar --version
-      - uses: tinovyatkin/action-php-codesniffer@v1
+
+      - uses: symartensv2v/action-php-codesniffer@v2
         with:
           files: "*.php" # you may customize glob as needed
           phpcs_path: php phpcs.phar
           standard: phpcs.xml
+          scope: file # either "file" to check entire file or "blame" to check only lines changed by author of current PR'
