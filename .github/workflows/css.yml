@@ -21,10 +21,8 @@ jobs:
         run: |
           curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
           php phpcs.phar --version
-
-      #validate css
       - uses: tinovyatkin/action-php-codesniffer@v1
         with:
           files: "*.css" # you may customize glob as needed
           phpcs_path: php phpcs.phar
-          standard: csscs.xml
+          standard: phpcs.xml
