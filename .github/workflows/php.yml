@@ -4,7 +4,9 @@ on:
   pull_request:
     paths:
       - "**.php"
+      - "**.css"
       - "phpcs.xml"
+      - "csscs.xml"
       - ".github/workflows/phpcs.yml"
 
 jobs:
@@ -27,3 +29,9 @@ jobs:
           files: "*.php" # you may customize glob as needed
           phpcs_path: php phpcs.phar
           standard: phpcs.xml
+
+      - uses: tinovyatkin/action-php-codesniffer@v1
+        with:
+          files: "*.css" # you may customize glob as needed
+          phpcs_path: php phpcs.phar
+          standard: csscs.xml
