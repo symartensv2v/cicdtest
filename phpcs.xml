@@ -9,11 +9,11 @@
         <properties>
             <property name="forbiddenFunctions" type="array">
                 <element key="mysqli"/>
-				<element key="mysqli_connect" value="$this->DB->example_replacement"/>
-				<element key="mysqli_close"/>
-				<element key="mysqli_query"/>
-				<element key="mysqli_fetch_assoc"/>
-				<element key="mysqli_fetch_array"/>
+                <element key="mysqli_connect" value="$this->DB->example_replacement"/>
+                <element key="mysqli_close"/>
+                <element key="mysqli_query"/>
+                <element key="mysqli_fetch_assoc"/>
+                <element key="mysqli_fetch_array"/>
             </property>
         </properties>
     </rule>
